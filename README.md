@@ -11,3 +11,5 @@ Please don't use this code, or any bytecode hosted here, for anything. Please re
 [![Reliability Rating](https://nautilus.sonarqube.org/api/project_badges/measure?project=SonarSource-Demos_salesforce-apex-example&metric=reliability_rating&token=01f5a714d878252a848df0651cea66135a0f2837)](https://nautilus.sonarqube.org/dashboard?id=SonarSource-Demos_salesforce-apex-example)
 
 
+
+
