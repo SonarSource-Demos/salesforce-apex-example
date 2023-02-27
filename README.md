@@ -1,13 +1,20 @@
-Milestones PM - Copy - Do not use
-==============
-This project is a copy of the [Milestones-PM](https://github.com/SalesforceLabs/Milestones-PM), this copy of the original repo is hosted here for the sole purpose of demonstrating SonarQube APEX code analysis.
+# Salesforce Apex Demo
+
+## Abstract
+This demo repo serves as a showcase of Sonar's analysis capabilities involving the Apex programming language for Salesforce. It's being prepared in advance of the Trailblazer DX conference in San Francisco (March 7-8, 2023).
+
+## Storyboard
+The project will have its default branch + 1 Pull Request branch under analysis. The main branch passes its QG despite issues in Overall Code. The PR will have a Quality Gate failure because it introduces problems.
+
+The overall goal is simple: to be able to tell a basic Clean as You Code story while looking at a repository containing code familiar to the audience.
+
+## Demo Instructions
+1. Use Create Project wizard to create a new project in your SonarQube instance and configure for GitHub integration w/manual CI
+2. Analyze main branch (manually and locally)
+3. Analyze the PR that already exists on this repo
+4. Confirm project dashboard + PR branch dashboard
+
+## Background
+This project is a copy of [Milestones-PM](https://github.com/SalesforceLabs/Milestones-PM). This copy of the original repo is hosted here for the sole purpose of demonstrating SonarQube APEX code analysis.
 
 Please don't use this code, or any bytecode hosted here, for anything. Please refer to the original Force.com LAB repository for any use of the library.
-
-[![Quality Gate Status](https://nautilus.sonarqube.org/api/project_badges/measure?project=SonarSource-Demos_salesforce-apex-example&metric=alert_status&token=01f5a714d878252a848df0651cea66135a0f2837)](https://nautilus.sonarqube.org/dashboard?id=SonarSource-Demos_salesforce-apex-example)
-
-[![Security Rating](https://nautilus.sonarqube.org/api/project_badges/measure?project=SonarSource-Demos_salesforce-apex-example&metric=security_rating&token=01f5a714d878252a848df0651cea66135a0f2837)](https://nautilus.sonarqube.org/dashboard?id=SonarSource-Demos_salesforce-apex-example)
-
-[![Reliability Rating](https://nautilus.sonarqube.org/api/project_badges/measure?project=SonarSource-Demos_salesforce-apex-example&metric=reliability_rating&token=01f5a714d878252a848df0651cea66135a0f2837)](https://nautilus.sonarqube.org/dashboard?id=SonarSource-Demos_salesforce-apex-example)
-
-
