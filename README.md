@@ -13,6 +13,7 @@ The overall goal is simple: to be able to tell a basic Clean as You Code story w
 2. Analyze main branch (manually and locally)
 3. Analyze the PR that already exists on this repo
 4. Confirm project dashboard + PR branch dashboard
+5. Open the project in SonarLint in VS Code and set up Connected Mode to your SQ instance. Bind the project (which you'll likely be prompted to do).
 
 ## Background
 This project is a copy of [Milestones-PM](https://github.com/SalesforceLabs/Milestones-PM). This copy of the original repo is hosted here for the sole purpose of demonstrating SonarQube APEX code analysis.

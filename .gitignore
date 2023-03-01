@@ -1,3 +1,5 @@
 .scannerwork
 pmd.xml
 .vscode/settings.json
+scanner_cmd
+scanner_cmd_pr
