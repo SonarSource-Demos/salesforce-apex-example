@@ -4,6 +4,7 @@ on:
     branches:
       - main # or the name of your main branch
       - release**
+      - feature**
   pull_request:
     types: [opened, synchronize, reopened]
   workflow_dispatch:
@@ -23,9 +24,9 @@ jobs:
         env:
           PMD_JAVA_OPTS: -Xmx2g
       - name: updatePmd
-        run: awk '{gsub("/home/.*salesforce-apex-example/", "/github/workspace/");print}' $GITHUB_WORKSPACE/pmd.xml > $GITHUB_WORKSPACE/pmdnew.xml
+        run: awk '{gsub("/home/.*salesforce-apex-example/", "/github/workspace/");print}' $GITHUB_WORKSPACE/pmd.xml > $GITHUB_WORKSPACE/pmdfixedpaths.xml
       - name: check-pmd-new
-        run: cat $GITHUB_WORKSPACE/pmdnew.xml
+        run: cat $GITHUB_WORKSPACE/pmdfixedpaths.xml
       - uses: sonarsource/sonarqube-scan-action@master
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
@@ -35,4 +36,5 @@ jobs:
             -Dsonar.projectName=Salesforce-Apex-Example
             -Dsonar.projectKey=SonarSource-Demos_salesforce-apex-example
             -Dsonar.verbose=true
-            -Dsonar.apex.pmd.reportPaths=pmdnew.xml
+            -Dsonar.apex.pmd.reportPaths=pmdfixedpaths.xml
+            -Dsonar.exclusions=pmd*.xml
