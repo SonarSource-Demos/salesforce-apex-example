@@ -1,11 +1,12 @@
 name: Build
 on:
-  [push, workflow_dispatch]:
+  push:
     branches:
       - main # or the name of your main branch
       - release**
   pull_request:
     types: [opened, synchronize, reopened]
+  workflow_dispatch:
 jobs:
   sonarqube:
     name: SonarQubeAnalysis
