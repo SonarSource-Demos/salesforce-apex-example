@@ -1,6 +1,6 @@
 name: Build
 on:
-  push:
+  [push, workflow_dispatch]:
     branches:
       - main # or the name of your main branch
       - release**
